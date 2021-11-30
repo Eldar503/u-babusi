@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEllo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">UBabussi<span>.</span></a>
+        <div class="menuToggle" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li>
+                <a href="index.html" onclick="toggleMenu();">Домой</a>
+            </li>
+            <li><a href="about.html" onclick="toggleMenu();">Про Нас</a></li>
+            <li><a href="menu.html" onclick="toggleMenu();">Меню</a></li>
+            <li>
+                <a href="#expert" onclick="toggleMenu();">Повара</a>
+            </li>
+            <li>
+                <a href="#testimonials" onclick="toggleMenu();">Отзывы</a>
+            </li>
+            <li><a href="#contact" onclick="toggleMenu();">Контакты</a></li>
+        </ul>
+    </header>
+
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>U Babussi</h2>
+            <p class="grey">Кращий семейный ресторан! Приходи с мамой, или с бабушкой или с подругой...</p>
+            <p class="grey">Але краще з усіма разом!</p>
+            <a href="menu.html" class="btn">Посмотрите меню</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>П</span>ро нас</h2>
+                <p>Ресторан находиться в 300м от головного корпуса КПІ в Киеве.
+                </p>
+                <p>Мы проводем большие мероприятия и макеты до 300 людей!
+                </p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="img/about.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="expert" id="expert">
+        <div class="title">
+            <h2 class="titleText">Наші <span>К</span>ухня</h2>
+            <p>Мы работаем открыто, процесс приготовления вы можете наблюдать в ресторане!</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/cook1.jpg">
+                </div>
+                <div class="text">
+                    <h3>Виктор Васильович</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/cook2.jpg">
+                </div>
+                <div class="text">
+                    <h3>Іван Петрович</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/cookG.jpg">
+                </div>
+                <div class="text">
+                    <h3>Галина Івановна</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/cook3.jpg">
+                </div>
+                <div class="text">
+                    <h3>Тарас Григорович</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonials" id="testimonials">
+        <div class="title white">
+            <h2 class="titleText"><span>О</span>тзывы наших клиентов!</h2>
+            <p>Лучшие записи из книги отзывов...</p>
+        </div>
+        <div class="content">
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/Oleh_Vynnyk.jpg">
+                </div>
+                <div class="text">
+                    <p>Всем молодым и не очень волчицам, рекомендую! Так вкусно я не ел даже в ресторане Тищенко, где салаты по три тысячи гривен... Тому, кто хочет вкусно, качественно и не дорого, ходите сюда!
+                    </p>
+                    <h3>Олег Винник</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/Shevchenko.jpg">
+                </div>
+                <div class="text">
+                    <p>Мій улюблений ресторан після важкого, але переможного матчу моєї збірної! Приємна домашня атмосфера, якраз те, що шукають люди після важкого робочого дня. Чудово! </p>
+                    <h3>Андрей Шевченко</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBx">
+                    <img src="img/Pysanka.jpg">
+                </div>
+                <div class="text">
+                    <p>Пожалуй, ни для кого не секрет, что я обожаю вкусно поесть! В этом ресторане, будто возвращаешься во времени, и опять оказываешься у своей лучшей бабушки... А еще здесь, говорят, можно встретить Винника!
+                    </p>
+                    <h3>Руслана Писанка</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="copyrightText">
+        <p>Copyright © 2020 <a href="#">UBabussi</a>. All Right Reserved.</p>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function() {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        });
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
