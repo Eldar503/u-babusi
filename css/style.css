@@ -23,7 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: 0.5s;
-    z-index: 2;
+    z-index: 3;
 }
 
 header.sticky {
